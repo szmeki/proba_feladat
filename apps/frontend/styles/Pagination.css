@@ -1,0 +1,157 @@
+/*lapozáshoz kell*/
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.lapozoBar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-align: middle;
+}
+
+.buttonokLimit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonokOldal {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.buttonHapci {
+  border: none;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  vertical-align: text-bottom;
+  text-decoration: none;
+  display: inline-flexbox;
+  font-size: 16px;
+  margin: 0px 4px 0px 0px;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+}
+
+.buttonHapci.buttonOldalak {
+  cursor: default;
+}
+
+.buttonHapci.buttonLepteto {
+  margin-top: 7.5px;
+  padding: 3px 0px;
+  font-family: Verdana, sans-serif;
+  height: 35px;
+  width: 35px;
+}
+
+.pageSearch {
+  background-color: #efeff0;
+  color: #000000;
+  width: 40%;
+  height: 40px;
+  max-width: 300px;
+  padding: 12px 20px;
+  margin: 4px 4px 4px 0px;
+  box-sizing: border-box;
+  border: 2px #ee771a;
+  border-radius: 4px;
+}
+
+.buttonH {
+  border-radius: 8px;
+  transition-duration: 0.6s;
+}
+
+.button2H {
+  background-color: #efeff0;
+  color: black;
+}
+
+.button2H.limitActive {
+  background-color: #ee771a;
+  color: white;
+}
+
+.button3H {
+  background-color: #efeff0;
+  color: black;
+}
+.button4H {
+  background-color: #efeff0;
+  color: black;
+}
+
+.button5H {
+  size: 0;
+  display: none;
+}
+
+.oldalSzamFont {
+  font-family: Verdana, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .button1H {
+    margin: 0px 4px 32px 0px;
+  }
+  .button2H {
+    margin: 0px 4px 32px 0px;
+  }
+
+  .lapozoBar {
+    margin-bottom: 10px;
+  }
+
+  .page__stat {
+    padding: 10px 10px 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button1H {
+    margin: 0px 4px 0px 0px;
+  }
+  .button2H {
+    margin: 0px 4px 0px 0px;
+  }
+
+  .pageSearch {
+    display: flex;
+  }
+}
+@media screen and (max-width: 767px) {
+  #munkakor {
+    display: none;
+  }
+
+  .products__row_head .products__cell {
+    margin-top: 32px;
+  }
+  .pageSearch {
+    display: none;
+  }
+}
+
+.button2H:hover {
+  background-color: #f19243;
+  color: white;
+}
+
+.button4H:hover {
+  background-color: #f19243;
+  color: white;
+}
+
+.button5H:checked + label {
+  background: blue;
+  color: white;
+}
+
+/*lapozáshoz kell eddig*/

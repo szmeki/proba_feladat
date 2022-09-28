@@ -1,0 +1,30 @@
+{
+  "name": "@quantum/frontend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3030 --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@directus/sdk": "^10.1.4",
+    "formik": "^2.2.9",
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "swr": "^1.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@quantum/collections": "^1.0.0",
+    "@quantum/eslint-config-custom": "*",
+    "@quantum/tsconfig": "*",
+    "@types/node": "^17.0.12",
+    "@types/react": "18.0.17",
+    "eslint": "7.32.0",
+    "next-transpile-modules": "9.0.0",
+    "typescript": "^4.5.3"
+  }
+}

@@ -1,0 +1,29 @@
+image: gitpod/workspace-postgres
+
+tasks:
+  - name: dev
+    before: |
+      export PATH=$PATH:./node_modules/.bin
+      # install werf
+      #curl -sSLO https://werf.io/install.sh && chmod +x install.sh && ./install.sh --ci && source "$(~/bin/trdl use werf 1.2 stable)" && rm install.sh
+      # set base urls
+      export FRONTEND_URL=https://3030-$GITPOD_WORKSPACE_ID.$GITPOD_WORKSPACE_CLUSTER_HOST
+      export BACKEND_URL=https://8055-$GITPOD_WORKSPACE_ID.$GITPOD_WORKSPACE_CLUSTER_HOST
+    init: |
+      npm install
+    command: |
+      (cd apps/backend && npm run bootstrap)
+      npm run dev
+
+ports:
+  - port: 8055
+    name: backend
+    onOpen: notify
+    visibility: public
+  - port: 3030
+    name: frontend
+    onOpen: notify
+    visibility: public
+  - port: 5432
+    name: postgres
+    onOpen: ignore

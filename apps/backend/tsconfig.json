@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "extensions",
+    "target": "ES2016",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "allowJs": true, // for the hack of directus.d.ts and directus.js to work
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"]
+}

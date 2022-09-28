@@ -1,0 +1,16 @@
+{
+  "name": "@quantum/collections",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sync": "directus-typescript-gen --host http://127.0.0.1:8055 --email admin@qdiak.hu --password test123456789 --typeName Collections --outFile index.d.ts ",
+    "precommit": "npm run sync"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "directus-typescript-gen": "^0.2.1"
+  }
+}

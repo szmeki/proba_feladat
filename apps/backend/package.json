@@ -1,0 +1,28 @@
+{
+  "name": "@quantum/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc --watch --preserveWatchOutput & PUBLIC_URL=$BACKEND_URL CORS_ORIGIN=$FRONTEND_URL nodemon --exec 'directus start' & ts-node ./scripts/import",
+    "start": "tsc && PUBLIC_URL=$BACKEND_URL CORS_ORIGIN=$FRONTEND_URL directus start & ts-node ./scripts/import",
+    "bootstrap": "directus bootstrap && directus schema apply schema.yaml --yes",
+    "sync": "directus schema snapshot schema.yaml --yes && ts-node ./scripts/export"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "directus": "^9.17.4",
+    "sqlite3": "^5.0.11",
+    "typescript": "^4.8.2"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "^9.18.1",
+    "@directus/sdk": "^10.1.4",
+    "@types/express": "^4.17.14",
+    "js-yaml": "^4.1.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  }
+}

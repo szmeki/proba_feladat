@@ -1,0 +1,18 @@
+#simple_text {
+  font-size: 14px;
+}
+
+#ListCim {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+#UjMunkakorButton {
+  min-width: 20%;
+}
+
+* .debug {
+  outline: 1px solid red !important;
+}

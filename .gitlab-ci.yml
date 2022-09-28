@@ -1,0 +1,20 @@
+image: node:16
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  script:
+    - npm install
+    - npm run build
+
+test:
+  script:
+    - npm install
+    - npm run test
+
+deploy:
+  script:
+    - curl -sSLO https://werf.io/install.sh && chmod +x install.sh && ./install.sh --ci && source "$(~/bin/trdl use werf 1.2 stable)"
+    - werf converge

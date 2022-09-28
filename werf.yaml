@@ -1,0 +1,10 @@
+project: quantum
+configVersion: 1
+
+---
+image: backend
+dockerfile: backend.dockerfile
+
+---
+image: frontend
+dockerfile: frontend.dockerfile

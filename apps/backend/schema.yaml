@@ -1,0 +1,2558 @@
+version: 1
+directus: 9.18.1
+collections:
+  - collection: dolgozo
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: dolgozo
+      color: null
+      display_template: "{{vezeteknev}}\_{{keresztnev}}"
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations:
+        - language: en-US
+          translation: Dolgozó
+          singular: dolgozó
+          plural: dolgozók
+      unarchive_value: null
+    schema:
+      comment: null
+      name: dolgozo
+      schema: public
+  - collection: fizetes_erkezese
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: fizetes_erkezese
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations:
+        - language: en-US
+          translation: Fizetés érkezése
+          singular: fizetés érkezése
+          plural: fizetés érkezések
+      unarchive_value: null
+    schema:
+      comment: null
+      name: fizetes_erkezese
+      schema: public
+  - collection: lakohely
+    meta:
+      accountability: all
+      archive_app_filter: false
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: lakohely
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations:
+        - language: en-US
+          translation: Lakóhely
+          singular: lakóhely
+          plural: lakóhelyek
+      unarchive_value: null
+    schema:
+      comment: null
+      name: lakohely
+      schema: public
+  - collection: munkakorok
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: munkakorok
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: draft
+    schema:
+      comment: null
+      name: munkakorok
+      schema: public
+  - collection: szekhely
+    meta:
+      accountability: all
+      archive_app_filter: false
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: szekhely
+      color: null
+      display_template: "{{iranyitoszam}}\_{{telepules}},\_{{kozterulet_nev_tipus}}\_{{hazszam}}.\_{{egyeb_emelet_ajto}}"
+      group: null
+      hidden: true
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations:
+        - language: en-US
+          translation: Székhely
+          singular: székhely
+          plural: székhelyek
+      unarchive_value: null
+    schema:
+      comment: null
+      name: szekhely
+      schema: public
+  - collection: szovetkezet
+    meta:
+      accountability: all
+      archive_app_filter: false
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: szovetkezet
+      color: null
+      display_template: '{{rovid_nev}}'
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: A fiókban együttesen kezelt különböző típusú szövetkezetek listája.
+      singleton: false
+      sort: null
+      sort_field: null
+      translations:
+        - language: en-US
+          translation: Szövetkezet
+          singular: szövetkezet
+          plural: szövetkezetek
+      unarchive_value: null
+    schema:
+      comment: null
+      name: szovetkezet
+      schema: public
+fields:
+  - collection: dolgozo
+    field: adoazonosito_jel
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: adoazonosito_jel
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: adoazonosito_jel
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: allampolgarsag
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: allampolgarsag
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Magyar
+            value: HU
+          - text: Olasz
+            value: IT
+      readonly: false
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: allampolgarsag
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: anyja_keresztneve
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: anyja_keresztneve
+      group: nev_csoport
+      hidden: false
+      interface: input
+      note: null
+      options:
+        trim: true
+      readonly: false
+      required: false
+      sort: 7
+      special: null
+      translations:
+        - language: en-US
+          translation: Anyja keresztneve
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: anyja_keresztneve
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: anyja_vezetekneve
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: anyja_vezetekneve
+      group: nev_csoport
+      hidden: false
+      interface: input
+      note: null
+      options:
+        trim: true
+      readonly: false
+      required: false
+      sort: 6
+      special: null
+      translations:
+        - language: en-US
+          translation: Anyja születési vezetékneve
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: anyja_vezetekneve
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: azonosito_szelfi
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: azonosito_szelfi
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: azonosito_szelfi
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: uuid
+  - collection: dolgozo
+    field: elerhetosegek
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: elerhetosegek
+      group: null
+      hidden: false
+      interface: group-raw
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special:
+        - alias
+        - group
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema: null
+    type: alias
+  - collection: dolgozo
+    field: email
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: email
+      group: elerhetosegek
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation:
+        _and:
+          - email:
+              _regex: >-
+                /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      validation_message: Hibás e-mail cím!
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: true
+      max_length: 255
+      name: email
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: id
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: uuid
+  - collection: dolgozo
+    field: keresztnev
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: keresztnev
+      group: nev_csoport
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: keresztnev
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: kifizetes_kuldese
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: kifizetes_kuldese
+      group: null
+      hidden: false
+      interface: list-o2m
+      note: null
+      options:
+        enableSelect: false
+        limit: 1
+        template: "{{kifizetes_modja}}:\_{{bankszamlaszam}}{{postai_kifizetes_cime}}\_({{hatalyossag_kezdete}}-{{hatalyossag_vege}})"
+      readonly: false
+      required: false
+      sort: 10
+      special:
+        - o2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema: null
+    type: alias
+  - collection: dolgozo
+    field: lakohely
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: lakohely
+      group: elerhetosegek
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableSelect: false
+        template: "{{iranyitoszam}}\_{{telepules}},\_{{kozterulet_nev_tipus}}\_{{hazszam}}.\_{{egyeb_emelet_ajto}}"
+      readonly: false
+      required: false
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: lakohely
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: true
+      max_length: null
+      name: lakohely
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: uuid
+  - collection: dolgozo
+    field: nev_csoport
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: nev_csoport
+      group: null
+      hidden: false
+      interface: group-raw
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special:
+        - alias
+        - group
+        - no-data
+      translations:
+        - language: en-US
+          translation: Alapadatok
+      validation: null
+      validation_message: null
+      width: full
+    schema: null
+    type: alias
+  - collection: dolgozo
+    field: nev_elotag
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: nev_elotag
+      group: nev_csoport
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        allowNone: true
+        choices:
+          - text: Dr.
+            value: dr.1
+          - text: dr.
+            value: dr.2
+          - text: id.
+            value: id.
+          - text: ifj.
+            value: ifj.
+          - text: Özv.
+            value: Özv.
+          - text: Phd.
+            value: Phd.
+          - text: Prof.
+            value: Prof.
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: nev_elotag
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: szemelyi_elolap
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: szemelyi_elolap
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 8
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: szemelyi_elolap
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: uuid
+  - collection: dolgozo
+    field: szemelyi_hatlap
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: szemelyi_hatlap
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 9
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: szemelyi_hatlap
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: uuid
+  - collection: dolgozo
+    field: szemelyi_igazolvany_szama
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: szemelyi_igazolvany_szama
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: szemelyi_igazolvany_szama
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: szuletesi_hely
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: szuletesi_hely
+      group: nev_csoport
+      hidden: false
+      interface: input
+      note: null
+      options:
+        placeholder: null
+      readonly: false
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: szuletesi_hely
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: szuletesi_ido
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: szuletesi_ido
+      group: nev_csoport
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: date
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: szuletesi_ido
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: date
+  - collection: dolgozo
+    field: taj_szam
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: taj_szam
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: taj_szam
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: telefonszam
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: telefonszam
+      group: elerhetosegek
+      hidden: false
+      interface: input
+      note: null
+      options:
+        trim: true
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: true
+      max_length: 255
+      name: telefonszam
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: dolgozo
+    field: vezeteknev
+    meta:
+      collection: dolgozo
+      conditions: null
+      display: null
+      display_options: null
+      field: vezeteknev
+      group: nev_csoport
+      hidden: false
+      interface: input
+      note: null
+      options:
+        placeholder: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: vezeteknev
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: dolgozo
+    type: string
+  - collection: fizetes_erkezese
+    field: bankszamlaszam
+    meta:
+      collection: fizetes_erkezese
+      conditions: null
+      display: null
+      display_options: null
+      field: bankszamlaszam
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: bankszamlaszam
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: fizetes_erkezese
+    type: string
+  - collection: fizetes_erkezese
+    field: dolgozo
+    meta:
+      collection: fizetes_erkezese
+      conditions: null
+      display: null
+      display_options: null
+      field: dolgozo
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableCreate: false
+        enableSelect: false
+        template: "{{vezeteknev}}\_{{keresztnev}}"
+      readonly: false
+      required: false
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: dolgozo
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: dolgozo
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: fizetes_erkezese
+    type: uuid
+  - collection: fizetes_erkezese
+    field: hatalyossag_kezdete
+    meta:
+      collection: fizetes_erkezese
+      conditions: null
+      display: null
+      display_options: null
+      field: hatalyossag_kezdete
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: date
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: hatalyossag_kezdete
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: fizetes_erkezese
+    type: date
+  - collection: fizetes_erkezese
+    field: hatalyossag_vege
+    meta:
+      collection: fizetes_erkezese
+      conditions: null
+      display: null
+      display_options: null
+      field: hatalyossag_vege
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: date
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: hatalyossag_vege
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: fizetes_erkezese
+    type: date
+  - collection: fizetes_erkezese
+    field: id
+    meta:
+      collection: fizetes_erkezese
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: nextval('fizetes_erkezese_id_seq'::regclass)
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: true
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: fizetes_erkezese
+    type: integer
+  - collection: fizetes_erkezese
+    field: kifizetes_modja
+    meta:
+      collection: fizetes_erkezese
+      conditions: null
+      display: null
+      display_options: null
+      field: kifizetes_modja
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Átutalással a bankszámlára
+            value: atutalas
+          - text: Készpénzben
+            value: keszpenz
+          - text: Postai kifizetes
+            value: postai
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: kifizetes_modja
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: fizetes_erkezese
+    type: string
+  - collection: fizetes_erkezese
+    field: postai_kifizetes_cime
+    meta:
+      collection: fizetes_erkezese
+      conditions: null
+      display: null
+      display_options: null
+      field: postai_kifizetes_cime
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: postai_kifizetes_cime
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: fizetes_erkezese
+    type: string
+  - collection: lakohely
+    field: egyeb_emelet_ajto
+    meta:
+      collection: lakohely
+      conditions: null
+      display: null
+      display_options: null
+      field: egyeb_emelet_ajto
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: egyeb_emelet_ajto
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: lakohely
+    type: string
+  - collection: lakohely
+    field: hazszam
+    meta:
+      collection: lakohely
+      conditions: null
+      display: null
+      display_options: null
+      field: hazszam
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        max: 1500
+        min: 1
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: hazszam
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: lakohely
+    type: integer
+  - collection: lakohely
+    field: id
+    meta:
+      collection: lakohely
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: lakohely
+    type: uuid
+  - collection: lakohely
+    field: iranyitoszam
+    meta:
+      collection: lakohely
+      conditions: null
+      display: null
+      display_options: null
+      field: iranyitoszam
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        max: 9999
+        min: 1000
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: iranyitoszam
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: lakohely
+    type: integer
+  - collection: lakohely
+    field: kozterulet_nev_tipus
+    meta:
+      collection: lakohely
+      conditions: null
+      display: null
+      display_options: null
+      field: kozterulet_nev_tipus
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: kozterulet_nev_tipus
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: lakohely
+    type: string
+  - collection: lakohely
+    field: telepules
+    meta:
+      collection: lakohely
+      conditions: null
+      display: null
+      display_options: null
+      field: telepules
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: telepules
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: lakohely
+    type: string
+  - collection: munkakorok
+    field: date_created
+    meta:
+      collection: munkakorok
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: timestamp with time zone
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: date_created
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: munkakorok
+    type: timestamp
+  - collection: munkakorok
+    field: id
+    meta:
+      collection: munkakorok
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: nextval('munkakorok_id_seq'::regclass)
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: true
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: munkakorok
+    type: integer
+  - collection: munkakorok
+    field: nev
+    meta:
+      collection: munkakorok
+      conditions: null
+      display: null
+      display_options: null
+      field: nev
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: nev
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: munkakorok
+    type: string
+  - collection: munkakorok
+    field: oraber
+    meta:
+      collection: munkakorok
+      conditions: null
+      display: null
+      display_options: null
+      field: oraber
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: oraber
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: munkakorok
+    type: integer
+  - collection: munkakorok
+    field: status
+    meta:
+      collection: munkakorok
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: $t:published
+            value: published
+            foreground: '#FFFFFF'
+            background: var(--primary)
+          - text: $t:draft
+            value: draft
+            foreground: '#18222F'
+            background: '#D3DAE4'
+          - text: $t:archived
+            value: archived
+            foreground: '#FFFFFF'
+            background: var(--warning)
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: $t:published
+            value: published
+          - text: $t:draft
+            value: draft
+          - text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: draft
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: false
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: status
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: munkakorok
+    type: string
+  - collection: munkakorok
+    field: user_created
+    meta:
+      collection: munkakorok
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_users
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: user_created
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: munkakorok
+    type: uuid
+  - collection: szekhely
+    field: egyeb_emelet_ajto
+    meta:
+      collection: szekhely
+      conditions: null
+      display: null
+      display_options: null
+      field: egyeb_emelet_ajto
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        placeholder: 3. em. 2. aj.
+        trim: true
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Egyéb (pl. emelet, ajót, stb.)
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: egyeb_emelet_ajto
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: szekhely
+    type: string
+  - collection: szekhely
+    field: hazszam
+    meta:
+      collection: szekhely
+      conditions: null
+      display: null
+      display_options: null
+      field: hazszam
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        max: 1500
+        min: 1
+        placeholder: pl. 24
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Házszám
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: hazszam
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: szekhely
+    type: integer
+  - collection: szekhely
+    field: id
+    meta:
+      collection: szekhely
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: nextval('szekhely_id_seq'::regclass)
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: true
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: szekhely
+    type: integer
+  - collection: szekhely
+    field: iranyitoszam
+    meta:
+      collection: szekhely
+      conditions: null
+      display: null
+      display_options: null
+      field: iranyitoszam
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        max: 9999
+        min: 1000
+        placeholder: pl. 1053
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Irányítószám
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: iranyitoszam
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: szekhely
+    type: integer
+  - collection: szekhely
+    field: kozterulet_nev_tipus
+    meta:
+      collection: szekhely
+      conditions: null
+      display: null
+      display_options: null
+      field: kozterulet_nev_tipus
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        placeholder: pl. Kiss utca
+        trim: true
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Közterület (neve és típusa)
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: kozterulet_nev_tipus
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: szekhely
+    type: string
+  - collection: szekhely
+    field: telepules
+    meta:
+      collection: szekhely
+      conditions: null
+      display: null
+      display_options: null
+      field: telepules
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        placeholder: pl. Budapest
+        trim: true
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Település
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: telepules
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: szekhely
+    type: string
+  - collection: szovetkezet
+    field: adoszam
+    meta:
+      collection: szovetkezet
+      conditions: null
+      display: raw
+      display_options:
+        conditionalFormatting: null
+      field: adoszam
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        placeholder: pl. 12345678-2-41
+        softLength: 13
+        trim: true
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Adószám
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: true
+      max_length: 255
+      name: adoszam
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: szovetkezet
+    type: string
+  - collection: szovetkezet
+    field: cegjegyzekszam
+    meta:
+      collection: szovetkezet
+      conditions: null
+      display: null
+      display_options: null
+      field: cegjegyzekszam
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        placeholder: pl. 01-02-123456
+        softLength: 12
+        trim: true
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Cégjegyzékszám
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: true
+      max_length: 255
+      name: cegjegyzekszam
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: szovetkezet
+    type: string
+  - collection: szovetkezet
+    field: rovid_nev
+    meta:
+      collection: szovetkezet
+      conditions: null
+      display: null
+      display_options: null
+      field: rovid_nev
+      group: null
+      hidden: false
+      interface: input
+      note: A szövetkezet rövid neve, ahogy a szóban hivatkozunk rá.
+      options:
+        placeholder: pl. Quantum
+        trim: true
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Rövid név
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: 255
+      name: rovid_nev
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: szovetkezet
+    type: string
+  - collection: szovetkezet
+    field: szekhely
+    meta:
+      collection: szovetkezet
+      conditions: null
+      display: null
+      display_options: null
+      field: szekhely
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableSelect: false
+        template: "{{iranyitoszam}}\_{{telepules}},\_{{kozterulet_nev_tipus}}\_{{hazszam}}.\_{{egyeb_emelet_ajto}}"
+      readonly: false
+      required: false
+      sort: null
+      special:
+        - m2o
+      translations:
+        - language: en-US
+          translation: Székhely
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: szekhely
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: true
+      max_length: null
+      name: szekhely
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: szovetkezet
+    type: integer
+  - collection: szovetkezet
+    field: szovetkezeti_tipus
+    meta:
+      collection: szovetkezet
+      conditions: null
+      display: null
+      display_options: null
+      field: szovetkezeti_tipus
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Iskolaszövetkezet
+            value: iskolaszovetkezet
+          - text: Szociális szövetkezet
+            value: szocialis_szovetkezet
+          - text: Kisgyermekkel otthon lévők szövetkezete
+            value: kismama_szovetkezet
+          - text: Nyugdíjas szövetkezet
+            value: nyugdijas_szovetkezet
+        placeholder: Válaszd ki az alábbiak közül a szövetkezet típusát!
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Szövetkezet típusa
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: szovetkezeti_tipus
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: szovetkezet
+    type: string
+  - collection: szovetkezet
+    field: teljes_nev
+    meta:
+      collection: szovetkezet
+      conditions: null
+      display: null
+      display_options: null
+      field: teljes_nev
+      group: null
+      hidden: false
+      interface: input
+      note: A szövetkezet teljes cégneve, ahogy az a szerződésekben is szerepel.
+      options:
+        placeholder: pl. Példa Diákmunka Iskolaszövetkezet
+        trim: true
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations:
+        - language: en-US
+          translation: Teljes név
+      validation:
+        _and:
+          - teljes_nev:
+              _icontains: szövetkezet
+      validation_message: >-
+        A szövetkezet cégnevében a jogszabályok alapján szerepelnie kell a
+        "szövetkezet" kifejezésnek.
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: true
+      max_length: 255
+      name: teljes_nev
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: szovetkezet
+    type: string
+relations:
+  - collection: dolgozo
+    field: azonosito_szelfi
+    meta:
+      junction_field: null
+      many_collection: dolgozo
+      many_field: azonosito_szelfi
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: directus_files
+    schema:
+      column: azonosito_szelfi
+      constraint_name: dolgozo_azonosito_szelfi_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: dolgozo
+  - collection: dolgozo
+    field: lakohely
+    meta:
+      junction_field: null
+      many_collection: dolgozo
+      many_field: lakohely
+      one_allowed_collections: null
+      one_collection: lakohely
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: lakohely
+    schema:
+      column: lakohely
+      constraint_name: dolgozo_lakohely_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: lakohely
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: dolgozo
+  - collection: dolgozo
+    field: szemelyi_elolap
+    meta:
+      junction_field: null
+      many_collection: dolgozo
+      many_field: szemelyi_elolap
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: directus_files
+    schema:
+      column: szemelyi_elolap
+      constraint_name: dolgozo_szemelyi_elolap_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: dolgozo
+  - collection: dolgozo
+    field: szemelyi_hatlap
+    meta:
+      junction_field: null
+      many_collection: dolgozo
+      many_field: szemelyi_hatlap
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: directus_files
+    schema:
+      column: szemelyi_hatlap
+      constraint_name: dolgozo_szemelyi_hatlap_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: dolgozo
+  - collection: fizetes_erkezese
+    field: dolgozo
+    meta:
+      junction_field: null
+      many_collection: fizetes_erkezese
+      many_field: dolgozo
+      one_allowed_collections: null
+      one_collection: dolgozo
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: kifizetes_kuldese
+      sort_field: hatalyossag_kezdete
+    related_collection: dolgozo
+    schema:
+      column: dolgozo
+      constraint_name: fizetes_erkezese_dolgozo_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: dolgozo
+      on_delete: NO ACTION
+      on_update: NO ACTION
+      table: fizetes_erkezese
+  - collection: munkakorok
+    field: user_created
+    meta:
+      junction_field: null
+      many_collection: munkakorok
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: directus_users
+    schema:
+      column: user_created
+      constraint_name: munkakorok_user_created_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_users
+      on_delete: NO ACTION
+      on_update: NO ACTION
+      table: munkakorok
+  - collection: szovetkezet
+    field: szekhely
+    meta:
+      junction_field: null
+      many_collection: szovetkezet
+      many_field: szekhely
+      one_allowed_collections: null
+      one_collection: szekhely
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: szekhely
+    schema:
+      column: szekhely
+      constraint_name: szovetkezet_szekhely_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: szekhely
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: szovetkezet

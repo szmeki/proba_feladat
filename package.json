@@ -1,0 +1,29 @@
+{
+  "name": "@quantum/root",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "turbo run dev --parallel",
+    "precommit": "turbo run precommit",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "bootstrap": "turbo run bootstrap",
+    "sync": "turbo run sync --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "husky": "^8.0.1",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "packageManager": "npm@8.15.0"
+}
