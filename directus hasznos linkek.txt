@@ -1,0 +1,58 @@
+<-------HASZNOS LINKEK---------->
+https://docs.directus.io/extensions/introduction.html (dokumentáció)
+https://github.com/directus-community/awesome-directus (community git repo)
+https://github.com/directus/directus/pull/11620  (edit field on interface)
+https://github.com/directus/directus/discussions/10087#discussioncomment-1711103 (hook between collections)
+https://github.com/directus/directus/discussions/10067 (fetch and update collection different from the one firing the hook)
+https://github.com/directus/directus/discussions/9885 (Hook update another field)
+https://www.youtube.com/watch?v=PzLZuM5LYXw&ab_channel=cheddar (extension live stream)
+https://github.com/directus/directus/discussions/3576 (npm dependecies in extension)	
+https://github.com/directus/directus/discussions/5468 (hasznos lehet)
+
+<-----COMMAND LINE PARANCSOK)
+ln ./test-hook/dist/index.js ./apps/backend/extensions/hooks/test-hook/index.js (link az extension mappába, hogy ne kelljen minden módosításnál másolgatni)
+
+<------PÉLDA HOOK EXTENSION----->
+
+import {} from '@directus/extensions-sdk';
+
+export default function registerHook({ filter }:any, { services, exceptions }:any) {
+  const { InvalidPayloadException } = exceptions
+  const { ItemsService } = services
+
+  filter("munkakorok.items.update", async (input:any, context:any, { schema }:any) => {
+    try {
+			console.log("Frissülteem")
+      // Create service
+      const productService = new ItemsService("munkakorok", { schema })
+			const testService = new ItemsService("teszt", { schema })
+
+      // Fetch updated products
+      const munkakorok = await productService.readMany(context.keys, {
+        fields: ["oraber", "bonusz", "nev"]
+      })
+
+      // For each updated product sum up the prices
+      munkakorok.forEach((munkakor:any) => {
+				createItem(testService,munkakor.nev)
+        input.osszeg =
+          (input.oraber !== undefined ? input.oraber : munkakor.oraber) +
+          (input.bonusz !== undefined ? input.bonusz : munkakor.bonusz)
+      })
+    } catch (e) {
+      throw new InvalidPayloadException(e)
+    }
+
+    return input
+  })
+	async function createItem(testService: typeof ItemsService, nev:string){
+    try{
+      await testService.createOne({
+        nev:nev
+      });
+	  }
+    catch(e){
+      throw new InvalidPayloadException(e)
+    }
+}
+}
